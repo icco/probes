@@ -45,5 +45,9 @@ probe {
 surfacer {
   type: STACKDRIVER
 }
+
+surfacer {
+  type: PROMETHEUS
+}
   }
 end
