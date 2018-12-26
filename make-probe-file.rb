@@ -8,10 +8,15 @@ open('probe.cfg', 'w') do |f|
     template = %{
 probe {
   name: "#{name}_homepage"
-  type: HTTPS
+  type: HTTP
   targets {
     host_names: "#{domain}"
   }
+
+  http_probe {
+    protocol: HTTPS
+  }
+
   interval_msec: 5000  # 5s
   timeout_msec: 1000   # 1s
 }
