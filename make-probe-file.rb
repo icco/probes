@@ -20,34 +20,9 @@ probe {
   interval_msec: 5000  # 5s
   timeout_msec: 1000   # 1s
 }
-
-probe {
-  name: "#{name}_healthz"
-  type: HTTP
-  targets {
-    host_names: "#{domain}"
-  }
-
-  http_probe {
-    relative_url: "/healthz"
-  }
-
-  interval_msec: 5000  # 5s
-  timeout_msec: 1000   # 1s
-}
     }.strip
 
     f.puts template
     f.puts "\n"
   end
-
-  f.puts %{
-surfacer {
-  type: STACKDRIVER
-}
-
-surfacer {
-  type: PROMETHEUS
-}
-  }
 end
