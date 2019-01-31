@@ -25,4 +25,11 @@ probe {
     f.puts template
     f.puts "\n"
   end
+
+  f.puts %{
+surfacer {
+  type: STACKDRIVER
+}
+  }.strip
+  f.puts "\n"
 end
