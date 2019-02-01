@@ -28,7 +28,7 @@ probe {
 
   f.puts %{
 surfacer {
-  type: STACKDRIVER
+  type: PROMETHEUS
 }
   }.strip
   f.puts "\n"
